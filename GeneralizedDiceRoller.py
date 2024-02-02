@@ -21,9 +21,9 @@ def dice_roll(NUMBER_TO_ROLL, HOW_MANY, ATTEMPTS):
     return succ
 
 if __name__ == '__main__':
-    NUMBER_TO_ROLL = int(input("What do you want to roll?"))
-    HOW_MANY = int(input("How many successes?"))
-    ATTEMPTS = int(input("How many attempts?"))
+    NUMBER_TO_ROLL = int(input("What do you want to roll? "))
+    HOW_MANY = int(input("How many successes? "))
+    ATTEMPTS = int(input("How many attempts? "))
 
     pool = Pool()
     args = [(NUMBER_TO_ROLL, HOW_MANY, ATTEMPTS)] * PROCESSES
