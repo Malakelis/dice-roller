@@ -11,11 +11,8 @@ NUMBER_TO_ROLL = 6
 def dice_roll(_):
     succ = 0
     for _ in range(MILLION):
-        check = 0
         for _ in range(ATTEMPTS):  # 12 attempts
             if random.randint(1, 6) == NUMBER_TO_ROLL:   # rolling a 6 given a fair 6 sided die
-                check += 1
-                if check == 2:   # rolling 2 6s
                     succ += 1
                     break
     return succ
