@@ -22,9 +22,8 @@ def dice_roll(NUMBER_TO_ROLL, HOW_MANY, ATTEMPTS):
 
 if __name__ == '__main__':
     NUMBER_TO_ROLL = int(input("What do you want to roll? "))
-    HOW_MANY = int(input("How many successes? "))
     ATTEMPTS = int(input("How many attempts? "))
-
+    HOW_MANY = int(input("How many successes? "))
     pool = Pool()
     args = [(NUMBER_TO_ROLL, HOW_MANY, ATTEMPTS)] * PROCESSES
     results = pool.starmap(dice_roll, args)  # starmap instead of map for multiple arguments
